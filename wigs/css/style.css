@@ -1,0 +1,419 @@
+@font-face {
+	font-family: 'Circular Std';
+	src: url('../fonts/CircularStd-Medium.eot');
+	src: local('☺'), url('../fonts/CircularStd-Medium.woff') format('woff'), 
+      url('../fonts/CircularStd-Medium.ttf') format('truetype'), url('../fonts/CircularStd-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Sofia Pro';
+	src: url('../fonts/Sofia Pro Regular Az.eot');
+	src: local('☺'), url('../fonts/Sofia Pro Regular Az.woff') format('woff'), 
+                    url('../fonts/Sofia Pro Regular Az.ttf') format('truetype'), 
+                    url('../fonts/Sofia Pro Regular Az.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Sofia Pro';
+	src: url('../fonts/SofiaProBold.eot');
+	src: local('☺'), url('../fonts/SofiaProBold.woff') format('woff'), 
+                    url('../fonts/SofiaProBold.ttf') format('truetype'), 
+                    url('../fonts/SofiaProBold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Sofia Pro';
+	src: url('../fonts/SofiaProMedium.eot');
+	src: local('☺'), url('../fonts/SofiaProMedium.woff') format('woff'), 
+                    url('../fonts/SofiaProMedium.ttf') format('truetype'), 
+                    url('../fonts/SofiaProMedium.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+* { 
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   border: none;
+   outline: none;
+   text-decoration: none;
+   list-style: none;
+}
+html {
+   scroll-behavior: smooth;
+}
+body {
+   background-color: #FAFAFA;
+   font-family: 'Sofia Pro';
+}
+:root {
+   --black: #000;
+   --blue: #001AA2;
+   --red: #FD2E24;
+   --yellow: #F4DE4D;
+   --gray: #E9E9E9;
+   --white: #ffffff;
+}
+.grid-wrapper {
+   max-width: 1370px;
+   margin: 0 auto;
+   padding: 50px 20px;
+   display: grid;
+   grid-template-areas: 
+   "header header"
+   "aside main";
+   gap: 70px 80px;
+   grid-template-columns: auto 1fr;
+}
+
+/* header */
+.header {
+   grid-area: header;
+}
+.header__container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.header__logo {
+   width: 93px;
+   height: 44px;
+}
+.header__logo img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.header__search-form {
+}
+.search-form {
+   display: flex;
+   align-items: center;
+   width: 25%;
+}
+.search-form__button {
+   flex-shrink: 0;
+   width: 19px;
+   height: 19px;
+   background: url('../img/header/union.svg') center / contain no-repeat;
+   margin: 0 15px 0 0;
+   cursor: pointer;
+}
+.search-form__input {
+   background: none;
+   font-family: 'Circular Std';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 17px;
+   line-height: 22px;
+   color: var(--black);
+   padding: 0 5px;
+   width: 100%;
+}
+.search-form__input:focus {
+   outline: 2px solid var(--yellow);
+   border-radius: 100px;
+}
+.search-form__input::placeholder {
+   font-weight: 500;
+   color: rgba(0, 0, 0, 0.2);
+}
+.header__menu-header {
+}
+.menu-header {
+   
+}
+.menu-header__list {
+   display: flex;
+   align-items: center;
+}
+.menu-header__item {
+}
+.menu-header__item:not(:last-child) {
+   margin: 0 42px 0 0;
+}
+.menu-header__link {
+   display: block;
+   font-family: 'Circular Std';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 17px;
+   line-height: 22px;
+   color: var(--black);
+   position: relative;
+}
+.menu-header__link::after {
+   content: '';
+   position: absolute;
+   bottom: -7px;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background-color: var(--black);
+   transform: scale(0);
+   transition: transform 250ms ease;
+   transform-origin: left;
+}
+.menu-header__link:hover::after {
+   transform: scale(1);
+}
+.header__info-user {
+   display: flex;
+}
+.header__basket {
+   margin: 0 30px 0 0;
+}
+.basket {
+}
+.basket__icon {
+   width: 19px;
+   height: 19px;
+}
+.basket__icon img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   cursor: pointer;
+}
+.header__person {
+}
+.person {
+}
+.person__icon {
+   width: 19px;
+   height: 19px;
+}
+.person__icon img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   cursor: pointer;
+}
+/* header */
+
+/* aside */
+.aside {
+   grid-area: aside;
+   display: grid;
+   grid-template: auto 1fr auto / 1fr;
+}
+.aside__title {
+   font-family: 'Sofia Pro';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 30px;
+   line-height: 30px;
+   color: var(--black);
+   margin: 0 0 45px 0;
+}
+.aside__menu-aside {
+}
+.menu-aside {
+}
+.menu-aside__list {
+}
+.menu-aside__item {  
+  
+}
+.menu-aside__item:not(:last-child) {
+   margin: 0 0 30px 0;
+}
+.menu-aside__link {
+   display: inline-flex;
+   align-items: center;
+}
+.menu-aside__icon {
+   width: 19px;
+   height: 19px;
+   margin: 0 15px 0 0;
+}
+.menu-aside__icon img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+.menu-aside__text {
+   font-family: 'Sofia Pro';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 15.7099px;
+   line-height: 16px;
+   color: var(--black);
+}
+.aside__help-center {
+}
+.help-center {
+   display: inline-flex;
+   align-items: center;
+   margin: auto 0 0 0;
+   cursor: pointer;
+}
+.help-center__icon {
+   width: 47px;
+   height: 47px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-shrink: 0;
+   margin: 0 15px 0 0;
+   border-radius: 50%;
+   background-color: var(--gray);
+}
+.help-center__icon img {
+   width: 19px;
+   height: 19px;
+   object-fit: cover;
+}
+.help-center__text {
+   font-family: 'Sofia Pro';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 15.7099px;
+   line-height: 16px;
+   color: var(--black);
+}
+/* aside */
+
+.main {
+   grid-area: main;
+}
+
+/* cards */
+.cards {
+}
+.cards__row {
+   display: grid;
+   grid-template: repeat(4, 180px) / repeat(4, 260px);
+   gap: 20px;
+   grid-template-areas: 
+   "sale sale model1 model2"
+   "summer summer model1 model2"
+   "model3 model4 trending trending"
+   "model3 model4 first-time first-time";
+}
+.cards__sale, .cards__summer, .cards__model, .cards__trending, .cards__first-time {
+   transition: transform 250ms ease;
+}
+.cards__sale:hover, .cards__summer:hover, .cards__model:hover, .cards__trending:hover, .cards__first-time:hover {
+   transform: scale(1.02);
+}
+.cards__sale {
+}
+.sale {
+   grid-area: sale;
+}
+.sale__link {
+   display: block;
+}
+.sale__link img {
+   display: block;
+   max-width: 100%;
+   border-radius: 15px;
+}
+.cards__summer {
+}
+.summer {
+   grid-area: summer;
+}
+.summer__link {
+   display: block;
+}
+.summer__link img {
+   display: block;
+   max-width: 100%;
+   border-radius: 15px;
+}
+.cards__model {
+}
+.model {
+   position: relative;
+}
+.model_1 {
+   grid-area: model1;
+}
+.model__link {
+   display: block;
+}
+.model__link img {
+   display: block;
+   max-width: 100%;
+   border-radius: 15px;
+}
+.model__like {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   width: 38px;
+   height: 38px;
+   background-color: var(--white);
+   border-radius: 50%;
+   cursor: pointer;
+}
+.model__like svg {
+   
+}
+.model_2 {
+   grid-area: model2;
+}
+.model_3 {
+   grid-area: model3;
+}
+.model_4 {
+   grid-area: model4;
+}
+.cards__trending {
+}
+.trending {
+   grid-area: trending;
+}
+.trending__link {
+   display: block;
+}
+.trending__link img {
+   display: block;
+   max-width: 100%;
+   border-radius: 15px;
+}
+.cards__first-time {
+}
+.cards__first-time img {
+   display: block;
+   max-width: 100%;
+   border-radius: 15px;
+}
+.first-time {
+   grid-area: first-time;
+}
+.first-time__link {
+   display: block;
+}
+.first-time__link img {
+   display: block;
+   max-width: 100%;
+   border-radius: 15px;
+}
+/* cards */
+
+@media all and (max-width: 1350px) {
+   .cards__row {
+      display: grid;
+      grid-template: repeat(6, 180px) / repeat(3, 260px);
+      gap: 20px;
+      grid-template-areas: 
+      "sale sale model1"
+      "summer summer model1"
+      "model2 model3 model4"
+      "model2 model3 model4"
+      "trending trending trending"
+      "first-time first-time first-time";
+   }
+}
